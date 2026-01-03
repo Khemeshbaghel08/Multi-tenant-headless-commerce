@@ -61,7 +61,12 @@ public class OrderTest {
 
         when(cartRepository.findByUserIdAndTenantIdAndActiveTrue("user1", "tenant1")).thenReturn(Optional.of(cart));
 
-        when(productRepository.reserveInventory(anyString(), eq("tenant1"), anyInt())).thenReturn(updateResult);
+        when(productRepository.reserveInventory(
+                anyString(),
+                anyString(),
+                anyInt()
+        )).thenReturn(1L);
+
 
 
         when(orderRepository.save(any(Order.class))).thenAnswer(invocation -> invocation.getArgument(0));
