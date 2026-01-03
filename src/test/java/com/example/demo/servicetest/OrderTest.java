@@ -55,9 +55,7 @@ public class OrderTest {
 
         cart.getItems().add(item);
 
-        when(cartRepository
-                .findByUserIdAndTenantIdAndActiveTrue("user1", "tenant1"))
-                .thenReturn(Optional.of(cart));
+        when(cartRepository.findByUserIdAndTenantIdAndActiveTrue("user1", "tenant1")).thenReturn(Optional.of(cart));
 
         when(productRepository.reserveInventory(
                 anyString(),
