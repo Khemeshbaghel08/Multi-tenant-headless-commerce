@@ -59,8 +59,7 @@ public class OrderTest {
 
         when(productRepository.reserveInventory(anyString(), anyString(), anyInt())).thenReturn(1L);
 
-        when(orderRepository.save(any(Order.class)))
-                .thenAnswer(invocation -> invocation.getArgument(0));
+        when(orderRepository.save(any(Order.class))).thenAnswer(invocation -> invocation.getArgument(0));
 
         Order order = orderService.checkout("tenant1", "user1");
 
