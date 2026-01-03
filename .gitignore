@@ -31,3 +31,11 @@ build/
 
 ### VS Code ###
 .vscode/
+
+/target/*
+!/target/site/jacoco/
+
+/.idea
+*.iml
+.DS_Store
+
