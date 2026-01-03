@@ -67,6 +67,7 @@ public class OrderTest {
         assertEquals(OrderStatus.CREATED, order.getStatus());
         assertEquals(1, order.getItems().size());
     }
+
 }
 
 
